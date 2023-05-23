@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
+import { useRoutes,useLocation,useNavigate } from 'react-router-dom';
+import routes from "./router/index";
 function App() {
+  let RouteObj = useRoutes(routes)
+  let location = useLocation()
+  let Navigate = useNavigate()
+  React.useEffect(()=>{
+    routerPower()
+  },[])
+
+  function routerPower(){
+    if(location.pathname == '/'){
+      // 外部的页面
+    }else{
+      //内部页面 =》 需要权限验证
+      if(sessionStorage.getItem('token')){
+        
+      }else{
+        // 没有登录
+        Navigate('/')
+      }
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {RouteObj}
     </div>
   );
 }

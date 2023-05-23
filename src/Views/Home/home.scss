@@ -1,0 +1,95 @@
+#home{
+    height: 100%;
+    display:flex;
+    .home-left{
+        height: 100%;
+        
+        #navlist{
+            height: 100%;
+            background-color: rgb(48, 65, 86);
+            color:rgb(191, 203, 217);
+        }
+    }
+    .home-right{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        #top_nav{
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background:#fff;
+            display:flex;
+            -webkit-box-shadow: 0 1px 4px rgba(0,21,41,.08);
+            box-shadow: 0 1px 4px rgba(0,21,41,.08);
+            padding: 0 20px;
+            justify-content:space-between;
+            .topNav_left{
+                height: 50px;
+                align-items: center;
+                display:flex;
+                #BreadItem{
+                    margin-left:10px;
+                }
+            }
+            .topNav_right{
+                display: flex;
+                align-items: center;
+                .serchItem{         
+                    display: flex;
+                    align-items: center;
+                    .drop_down{
+                        .ant-dropdown-trigger{
+                            display:inline-block;
+                            img{
+                                height:40px;
+                                width:40px;
+                                border-radius:5px;
+                        }
+                    }
+                }
+                }
+            }
+        }
+        #one_page{
+            background:rgb(240, 242, 245);
+            flex:1;
+            padding: 40px 30px;
+            #zhexain{
+                background:white;
+                padding-top: 15px;
+                height:350px;
+                width:100%;
+                #zhexain>div{
+                    width:100%;
+                }
+            }
+        }
+        #key_board_chart,#broken_line{
+            flex:1;
+        }
+        #broken_line{
+            color: #fff;
+        }
+        
+    }
+    .ant-menu{
+        height: 100%;
+    }
+    .ant-menu-title-content{
+        width: 150px;
+    }
+    .anticon-search{
+        margin-right: 8px;
+    }
+    .anticon-expand{
+        margin:8px;
+    }
+    .anticon-compress{
+        margin:8px;
+    }
+    .ant-dropdown-menu-item-only-child{
+        background-color: #e8f4ff !important;
+        color: #46a6ff !important;
+    } 
+}
